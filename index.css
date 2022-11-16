@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    background-color: rgb(10, 10, 10);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    display: block;
+    padding: clamp(0.3em, 2vw, 2em) clamp(1em, 4vw, 4em);
+    color: azure;
+    font-size: clamp(2em, 8vw, 7em);
+    font-family: "Permanent Marker", cursive;
+    text-decoration: none;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.link:hover::before {
+    width: 100%;
+    transition: width 600ms ease-in-out;
+}
+.link::before {
+    background:linear-gradient(to right, transparent, rgb(10, 10, 212), lightblue);
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 0%;
+}
